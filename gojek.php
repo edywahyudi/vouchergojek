@@ -10,8 +10,6 @@ echo "\n";
 echo "\e[94m          Voucher Claim Gojek           \n";
 echo "\e[91m FORMAT NOMOR HP : INDONESIA '62***' , US='1***'\n";
 echo "\e[93m SCRIPT GOJEK AUTO REGISTER + AUTO CLAIM VOUCHER\n";
-echo "\e[93m SCRIPT : Kumpulanremaja.com\n";
-echo "\e[93m Github: 4kumpulanremaja \n";
 echo "\n";
 echo "\e[96m[?] Masukkan Nomor HP Anda (62/1) : ";
 $nope = trim(fgets(STDIN));
@@ -34,14 +32,14 @@ if ($register == false)
       else
         {
         file_put_contents("token/".$verif['data']['customer']['name'].".txt", $verif['data']['access_token']);
-        echo "\e[93m[!] Trying to redeem Voucher : GOFOODBOBA07 !\n";
+        echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
         sleep(3);
         $claim = claim($verif);
         if ($claim == false)
             {
             echo "\e[92m[!]".$voucher."\n";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : GOFOODBOBA10 !\n";
+            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
             sleep(3);
             goto next;
             }
@@ -57,7 +55,7 @@ if ($register == false)
             if ($claim == false) {
                 echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOODBOBA19 !\n";
+                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto next1;
             }
